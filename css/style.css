@@ -8,13 +8,6 @@ html {
   background: black;
 }
 
-a {
-  font-size: 20px;
-  text-decoration: none;
-  color: white;
-  font-family: "Roboto", sans-serif;
-}
-
 /* Gift task start */
 
 .container {
@@ -169,4 +162,142 @@ a {
   width: 60%;
 }
 
-/* Stairway task start */
+/* Stairway task end */
+
+/* Login form task start */
+
+.login__form__container {
+  max-width: 1300px;
+  width: 100%;
+  height: 750px;
+  background: #7c2ae8;
+  margin: 50px auto;
+}
+
+.login__form__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__form {
+  width: 45%;
+  height: 650px;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.form__title h1 {
+  font-family: sans-serif;
+}
+
+.form__title .line {
+  width: 35px;
+  height: 3px;
+  background: #693fab;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.form__section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form__section span {
+  padding-left: 10px;
+}
+
+i {
+  font-size: 23px;
+  color: #833ed5;
+}
+
+a {
+  text-decoration: none;
+  color: #833ed5;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+.form__section__email,
+.form__section__password label {
+  color: gray;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.form__section__email label input {
+  width: 90%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+  font-size: 18px;
+}
+
+.form__section__password label input {
+  width: 90%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+  font-size: 18px;
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form__footer button {
+  width: 90%;
+  height: 60px;
+  background: #7c2ae8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form__footer p {
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif;
+  padding-right: 50px;
+}
+
+.form__footer p a {
+  padding-left: 5px;
+}
+
+.login__form__image {
+  width: 45%;
+  height: 654px;
+}
+
+.login__form__image img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+/* Login form task end*/
