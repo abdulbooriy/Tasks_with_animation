@@ -28,8 +28,21 @@ html {
   gap: 30px;
 }
 
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .gift__wrapper__header {
   display: flex;
+  transform: translateY(30px);
+  animation: fadeSlideUp .6s ease forwards;
 }
 
 .left,
@@ -73,6 +86,25 @@ html {
   width: 100px;
   height: 100px;
   background: white;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 2s infinite alternate;
+}
+
+.gift__item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.gift__item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.gift__item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.gift__item:nth-child(4) {
+  animation-delay: 0.8s;
 }
 
 /* Gift task end */
@@ -91,8 +123,21 @@ html {
   position: relative;
 }
 
+.bell__top__circle {
+  width: 80px;
+  height: 70px;
+  background: #f2ad43;
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  top: calc(50% - 130px);
+  z-index: 2;
+}
+
 .bell_wrapper {
+  animation: bell_animation 2s infinite;
+  transform-origin: top center;
   position: relative;
+  z-index: 10;
 }
 
 .bell {
@@ -104,25 +149,32 @@ html {
   z-index: 1;
 }
 
-.bell__circle,
-.bell__top__circle {
+.bell__circle {
   width: 80px;
   height: 70px;
-  position: absolute;
-}
-
-.bell__top__circle {
-  background: #f2ad43;
-  border-radius: 50% 50% 0 0;
-  top: -30px;
-  left: 60px;
-}
-
-.bell__circle {
   background: #824b20;
   border-radius: 0 0 50% 50%;
+  position: absolute;
   top: 170px;
   left: 60px;
+}
+
+@keyframes bell_animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* Bell task end */
@@ -158,27 +210,27 @@ html {
   background: #191919;
   transform: translateX(-300px);
   opacity: 0;
-  animation: slideIn 1.5s forwards;
+  animation: slideIn 2s infinite forwards;
 }
 
 .stair:nth-child(1) {
   width: 20%;
-  animation-delay: 0.2s;
+  animation-delay: .2s;
 }
 
 .stair:nth-child(2) {
   width: 40%;
-  animation-delay: 0.4s;
+  animation-delay: .4s;
 }
 
 .stair:nth-child(3) {
   width: 60%;
-  animation-delay: 0.6s;
+  animation-delay: .6s;
 }
 
 .stair:nth-child(4) {
   width: 80%;
-  animation-delay: 0.8s;
+  animation-delay: .8s;
 }
 
 @keyframes slideIn {
